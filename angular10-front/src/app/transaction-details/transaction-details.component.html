@@ -1,0 +1,21 @@
+<h2>Transaction Details</h2> 
+
+<hr/>
+<div *ngIf="ts">
+  <div>
+    <label><b>Compte</b></label> {{ts.compte}}
+  </div>
+  <div>
+    <label><b>Montant </b></label> {{ts.montant}}
+  </div>
+  <div>
+    <label><b>Descriptif </b></label> {{ts.descriptif}}
+  </div>
+  <div>
+    <label><b>Date </b></label> {{ts.date}}
+  </div>  
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">transactions List</button><br>

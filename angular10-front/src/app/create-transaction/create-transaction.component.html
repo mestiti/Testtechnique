@@ -1,0 +1,30 @@
+<h3>Create Transaction</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">compte </label>
+      <input type="text" class="form-control" id="compte" required [(ngModel)]="ts.compte" name="compte">
+    </div>
+
+    <div class="form-group">
+      <label for="name">montant </label>
+      <input type="text" class="form-control" id="montant" required [(ngModel)]="ts.montant" name="montant">
+    </div>
+
+    <div class="form-group">
+      <label for="name">descriptif </label>
+      <input type="text" class="form-control" id="descriptif" required [(ngModel)]="ts.descriptif" name="descriptif">
+    </div>
+
+    <div class="form-group">
+      <label for="name">date</label>
+      <input type="date" class="form-control" id="date" required [(ngModel)]="ts.date" name="date">
+    </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>Successfully submitted!</h4>
+</div>

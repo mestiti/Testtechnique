@@ -1,0 +1,31 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Transactions List</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>compte</th>
+            <th>montant</th>
+            <th>descriptif</th>
+            <th>date</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let ts of transactions | async">
+            <td>{{ts.compte}}</td>
+            <td>{{ts.montant}}</td>
+            <td>{{ts.descriptif}}</td>
+            <td>{{ts.date}}</td>
+            <td>
+              <button (click)="updateTransaction(ts.id)" class="btn btn-warning" style="margin-left: 10px">Update</button>
+              <button (click)="deleteTransaction(ts.id)" class="btn btn-danger" style="margin-left: 10px">Delete</button>
+                <button (click)="transactionDetails(ts.id)" class="btn btn-info" style="margin-left: 10px">Details</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
