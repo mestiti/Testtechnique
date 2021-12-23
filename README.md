@@ -1,4 +1,4 @@
-# Testtechnique
+# Insctructions
 
 pour lancer le front
 npm intsall puis ng serve 
